@@ -1,0 +1,57 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://christosetoka.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
+Disallow: /api/
+
+# Allow access to important pages
+Allow: /
+Allow: /about
+Allow: /programs
+Allow: /resources
+Allow: /events
+Allow: /connect
+
+# Block common bot traps
+Disallow: /*?*
+Disallow: /*#
+Disallow: /search?
+Disallow: /404
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Google-specific directives
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+# Bing-specific directives
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

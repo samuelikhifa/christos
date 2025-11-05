@@ -1,0 +1,145 @@
+{
+  "name": "Dr. Christos Etoka - Mind Engineering & Transformational Leadership",
+  "short_name": "Dr. Christos",
+  "description": "Executive Vice Chancellor of Xrislid Institute. Transforming lives through Mind Engineering, leadership development, and human capacity building.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#2563EB",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["education", "business", "lifestyle", "productivity"],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Homepage on desktop"
+    },
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Homepage on mobile"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "About Dr. Christos",
+      "short_name": "About",
+      "description": "Learn about Dr. Christos Etoka's background and expertise",
+      "url": "/about",
+      "icons": [
+        {
+          "src": "/icons/shortcut-about.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Programs",
+      "short_name": "Programs",
+      "description": "Explore Mind Engineering and leadership programs",
+      "url": "/programs",
+      "icons": [
+        {
+          "src": "/icons/shortcut-programs.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Book a Session",
+      "short_name": "Book",
+      "description": "Schedule a consultation or coaching session",
+      "url": "/connect",
+      "icons": [
+        {
+          "src": "/icons/shortcut-book.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Resources",
+      "short_name": "Resources",
+      "description": "Access books, articles, and videos",
+      "url": "/resources",
+      "icons": [
+        {
+          "src": "/icons/shortcut-resources.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://christosetoka.com/manifest.json"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "capture_links": "existing-client-navigate"
+}

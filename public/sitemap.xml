@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://christosetoka.com/</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://christosetoka.com/og-image.jpg</image:loc>
+      <image:title>Dr. Christos Etoka - Mind Engineering Expert</image:title>
+      <image:caption>Executive Vice Chancellor of Xrislid Institute specializing in Mind Engineering and Transformational Leadership</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://christosetoka.com/about</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://christosetoka.com/about-image.jpg</image:loc>
+      <image:title>About Dr. Christos Etoka</image:title>
+      <image:caption>Learn about Dr. Christos Etoka's background in psychology, education, and leadership development</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Programs Page -->
+  <url>
+    <loc>https://christosetoka.com/programs</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://christosetoka.com/programs-image.jpg</image:loc>
+      <image:title>Mind Engineering Programs</image:title>
+      <image:caption>Transformational leadership and mind engineering programs by Dr. Christos Etoka</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Resources Page -->
+  <url>
+    <loc>https://christosetoka.com/resources</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://christosetoka.com/resources-image.jpg</image:loc>
+      <image:title>Leadership Resources</image:title>
+      <image:caption>Books, articles, and videos on mind engineering and leadership development</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Events Page -->
+  <url>
+    <loc>https://christosetoka.com/events</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://christosetoka.com/events-image.jpg</image:loc>
+      <image:title>Speaking Events</image:title>
+      <image:caption>Upcoming speaking engagements and events by Dr. Christos Etoka</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Connect Page -->
+  <url>
+    <loc>https://christosetoka.com/connect</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://christosetoka.com/connect-image.jpg</image:loc>
+      <image:title>Connect with Dr. Christos</image:title>
+      <image:caption>Get in touch with Dr. Christos Etoka for speaking engagements and coaching</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://christosetoka.com/privacy-policy</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://christosetoka.com/terms-of-service</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://christosetoka.com/cookie-policy</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
