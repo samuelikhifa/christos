@@ -107,7 +107,7 @@ const Connect = () => {
       </section>
 
       {/* Section 2: Executive Coaching CTA - Dynamic blue gradient */}
-      <section ref={coachingRef} className="relative bg-blue-600 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section ref={coachingRef} className="relative bg-gradient-to-br from-blue-800 via-blue-400 to-blue-600 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-500 opacity-50" />
         
         <div className="max-w-6xl mx-auto relative z-10">

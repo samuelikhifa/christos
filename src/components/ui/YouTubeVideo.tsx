@@ -11,7 +11,6 @@ interface YouTubeVideoProps {
   loop?: boolean;
   startTime?: number;
   endTime?: number;
-  thumbnail?: string;
 }
 
 const YouTubeVideo = ({
@@ -23,8 +22,7 @@ const YouTubeVideo = ({
   muted = false,
   loop = false,
   startTime,
-  endTime,
-  thumbnail
+  endTime
 }: YouTubeVideoProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -51,12 +49,6 @@ const YouTubeVideo = ({
     params.append('enablejsapi', '1'); // Enable JavaScript API
     
     return `${baseUrl}?${params.toString()}`;
-  };
-
-  // Get thumbnail URL
-  const getThumbnailUrl = () => {
-    if (thumbnail) return thumbnail;
-    return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
   };
 
   const handleIframeLoad = () => {

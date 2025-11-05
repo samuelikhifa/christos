@@ -93,9 +93,7 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   background: #2563EB;
 }
 
-/* ========================================
-   CUSTOM ANIMATIONS
-   ======================================== */
+
 
 @keyframes fadeIn {
   from {
@@ -202,9 +200,6 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   animation: rotate 1s linear infinite;
 }
 
-/* ========================================
-   REUSABLE COMPONENTS
-   ======================================== */
 
 /* Glass Morphism Effect */
 .glass {

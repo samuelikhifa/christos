@@ -87,7 +87,7 @@ const Events = () => {
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
                 Transforming Minds
               </h1>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white bg-clip-text text-transparent">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-br from-blue-800 via-blue-400 to-blue-600 bg-clip-text text-transparent">
                 Around the World
               </h1>
               <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">

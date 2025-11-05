@@ -68,18 +68,12 @@ export default defineConfig({
       },
     }),
     
-    // Gzip compression
+    // Gzip and Brotli compression
     compression({
-      algorithm: 'gzip',
-      exclude: [/\.(br)$/, /\.(gz)$/],
-      threshold: 1024,
+      algorithms: ['gzip'],
     }),
-    
-    // Brotli compression (better than gzip)
     compression({
-      algorithm: 'brotliCompress',
-      exclude: [/\.(br)$/, /\.(gz)$/],
-      threshold: 1024,
+      algorithms: ['brotliCompress'],
     }),
   ],
   
