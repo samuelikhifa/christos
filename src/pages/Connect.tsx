@@ -82,7 +82,7 @@ const Connect = () => {
       {/* Section 1: Hero - Soft gradient with floating orbs */}
      <section
         ref={heroRef}
-        className="relative min-h-[80vh] bg-black overflow-hidden flex items-center pt-40 sm:pt-30 -mt-20 sm:-mt-24"
+        className="relative min-h-[70vh] md:min-h-screen bg-black overflow-hidden flex items-center pt-20 sm:pt-24 md:pt-40 -mt-16 sm:-mt-20 md:-mt-24"
       >
         <div className="hidden lg:block absolute text-[16rem] font-bold text-white/5 right-10 top-1/2 -translate-y-1/2 pointer-events-none select-none">
           Christos
@@ -90,15 +90,15 @@ const Connect = () => {
         <div className="hidden md:block absolute h-1 w-96 bg-blue-600/20 -rotate-45 top-1/4 right-20" />
         <div className="hidden md:block absolute h-2 w-64 bg-blue-600/20 rotate-30 bottom-1/3 right-40" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
-          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-3 space-y-4 sm:space-y-6">
-              <p className="text-gray-400 text-base sm:text-lg italic">Connect</p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 md:py-16 lg:py-0">
+          <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-center">
+            <div className="w-full lg:col-span-3 space-y-3 sm:space-y-4 md:space-y-6 text-left">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg italic">Connect</p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                Get In Touch
               </h1>
               
-              <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
+              <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl lg:mx-0">
                 A Conversation Around Transformation.
               </p>
             </div>
@@ -111,7 +111,7 @@ const Connect = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-500 opacity-50" />
         
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Image */}
             <div className="relative aspect-[4/3] bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -433,7 +433,7 @@ He is the author of “The Mind Makes the Man”, a groundbreaking work on the p
             Gallery
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {galleryImages.map((image, index) => (
               <div
                 key={index}

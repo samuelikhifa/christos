@@ -90,7 +90,7 @@ const Programs = () => {
      
       <section
         ref={heroRef}
-        className="relative min-h-[80vh] bg-black overflow-hidden flex items-center pt-40 sm:pt-30 -mt-20 sm:-mt-24"
+        className="relative min-h-[70vh] md:min-h-screen bg-black overflow-hidden flex items-center pt-20 sm:pt-24 md:pt-40 -mt-16 sm:-mt-20 md:-mt-24"
       >
         <div className="hidden lg:block absolute text-[18rem] font-bold text-white/5 right-10 top-1/2 -translate-y-1/2 pointer-events-none select-none">
           Christos
@@ -98,17 +98,17 @@ const Programs = () => {
         <div className="hidden md:block absolute h-1 w-96 bg-blue-600/20 -rotate-45 top-1/4 right-20" />
         <div className="hidden md:block absolute h-2 w-64 bg-blue-600/20 rotate-30 bottom-1/3 right-40" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
-          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-3 space-y-4 sm:space-y-6">
-              <p className="text-gray-400 text-base sm:text-lg italic">Programs</p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 md:py-16 lg:py-0">
+          <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-center">
+            <div className="w-full lg:col-span-3 space-y-3 sm:space-y-4 md:space-y-6 text-left">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg italic">Programs</p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                  Programs & Training
               </h1>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-br from-blue-800 via-blue-400 to-blue-600  bg-clip-text text-transparent">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-br from-blue-800 via-blue-400 to-blue-600  bg-clip-text text-transparent">
                 Around the World
               </h1>
-              <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
+              <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl lg:mx-0">
                 Designed to Transform Minds and Elevate Leaders.
               </p>
             </div>
@@ -146,7 +146,7 @@ const Programs = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 title: 'Inner Circle',
@@ -169,7 +169,7 @@ const Programs = () => {
             ].map((program, index) => (
               <div
                 key={index}
-                className="relative h-96 sm:h-[500px]"
+                className="relative h-[400px] sm:h-[450px] md:h-[500px]"
                 style={{ perspective: '1000px' }}
               >
                 <div
@@ -273,7 +273,7 @@ const Programs = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
               <div
                 key={index}

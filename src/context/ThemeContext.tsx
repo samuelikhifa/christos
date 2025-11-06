@@ -20,13 +20,18 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     // Apply theme to html and body for better global coverage
+    const root = document.documentElement;
+    const body = document.body;
+    
     if (isDark) {
-      document.documentElement.classList.add('dark');
-      document.body.classList.add('dark');
+      root.classList.add('dark');
+      body.classList.add('dark');
+      root.style.colorScheme = 'dark';
       localStorage.setItem('theme', 'dark');
     } else {
-      document.documentElement.classList.remove('dark');
-      document.body.classList.remove('dark');
+      root.classList.remove('dark');
+      body.classList.remove('dark');
+      root.style.colorScheme = 'light';
       localStorage.setItem('theme', 'light');
     }
   }, [isDark]);

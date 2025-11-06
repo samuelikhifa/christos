@@ -156,7 +156,7 @@ const PrivacyPolicy = () => {
             <h2 className={`text-2xl sm:text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-8 text-center`}>
               Types of Data We Collect
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {dataTypes.map((type, index) => (
                 <div
                   key={index}

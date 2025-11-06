@@ -117,7 +117,7 @@ const About = () => {
       {/* Section 1: Hero - Black with geometric lines */}
       <section
         ref={heroRef}
-        className="relative min-h-screen bg-black overflow-hidden flex items-center pt-40 sm:pt-30 -mt-20 sm:-mt-24"
+        className="relative min-h-[70vh] md:min-h-screen bg-black overflow-hidden flex items-center pt-20 sm:pt-24 md:pt-40 -mt-16 sm:-mt-20 md:-mt-24"
       >
         <div className="hidden lg:block absolute text-[16rem] font-bold text-white/5 right-10 top-1/2 -translate-y-1/2 pointer-events-none select-none">
           Christos
@@ -125,20 +125,20 @@ const About = () => {
         <div className="hidden md:block absolute h-1 w-96 bg-blue-600/20 rotate-45 top-1/4 right-20" />
         <div className="hidden md:block absolute h-2 w-64 bg-blue-600/20 -rotate-30 bottom-1/3 right-40" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-4 sm:space-y-6">
-              <p className="text-gray-400 text-base sm:text-lg italic">About</p>
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 md:py-16 lg:py-0">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            <div className="w-full space-y-3 sm:space-y-4 md:space-y-6 text-left">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg italic">About</p>
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                 Dr. Christos Etoka
               </h1>
-              <p className="font-body text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed">
+              <p className="font-body text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
                 Educator, Psychologist, and Transformational Leader dedicated to unlocking human
                 potential through Mind Engineering.
               </p>
             </div>
 
-           <div className="relative w-full aspect-square bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
+           <div className="w-full relative aspect-square max-w-[260px] sm:max-w-sm md:max-w-md mx-auto lg:max-w-none bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
   <img
     src={c12Image}
     alt="Professional Portrait"
@@ -163,7 +163,7 @@ const About = () => {
         <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-indigo-200/20 rounded-full blur-3xl"></div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Large Bio Block */}
             <div
               className={`lg:col-span-2 ${
@@ -227,7 +227,7 @@ const About = () => {
 
             {/* Quote Block */}
             <div
-              className={`lg:col-span-3 bg-blue-600 rounded-2xl p-8 sm:p-12 shadow-lg transition-all duration-700 ${
+              className={`lg:col-span-3 bg-gradient-to-br from-blue-800 via-blue-400 to-blue-600 rounded-2xl p-8 sm:p-12 shadow-lg transition-all duration-700 ${
                 visibleSections.story ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: '0.4s' }}
@@ -273,22 +273,22 @@ const About = () => {
             My Philosophy
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Image with overlay */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] lg:h-[600px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[300px] sm:h-[400px] lg:h-[600px] w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-purple-900">
-                <img src={c14Image} alt="the story" />
+                <img src={c14Image} alt="the story" className="w-full h-full object-cover" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <p className="font-mono text-white text-lg sm:text-xl italic font-semibold">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
+                <p className="font-mono text-white text-base sm:text-lg md:text-xl italic font-semibold">
                   "True transformation begins in the mind"
                 </p>
               </div>
             </div>
 
             {/* Philosophy Cards Stack */}
-            <div className="font-display relative min-h-[500px] lg:min-h-[600px]">
+            <div className="font-display flex flex-col lg:relative gap-4 lg:gap-0 lg:min-h-[600px]">
               {[
                 {
                   title: 'Mental Reformation',
@@ -313,26 +313,30 @@ const About = () => {
               ].map((philosophy, index) => (
                 <div
                   key={index}
-                  className={`absolute left-0 right-0 ${
+                  className={`lg:absolute lg:left-0 lg:right-0 ${
                     isDark ? 'bg-gray-900 hover:bg-gray-800' : 'bg-white hover:bg-gray-50'
                   } rounded-2xl p-6 sm:p-8 shadow-xl border-l-4 ${
                     philosophy.accent
-                  } cursor-pointer transition-all duration-500 hover:scale-105 hover:z-50 ${
+                  } cursor-pointer transition-all duration-500 lg:hover:scale-105 lg:hover:z-50 ${
                     visibleSections.philosophy ? 'opacity-100' : 'opacity-0'
                   }`}
                   style={{
-                    top: `${index * 80}px`,
-                    transform: `rotate(${(index % 2 === 0 ? 1 : -1) * 2}deg)`,
+                    top: window.innerWidth >= 1024 ? `${index * 80}px` : 'auto',
+                    transform: window.innerWidth >= 1024 ? `rotate(${(index % 2 === 0 ? 1 : -1) * 2}deg)` : 'none',
                     transitionDelay: `${index * 0.15}s`,
-                    zIndex: index + 1,
+                    zIndex: window.innerWidth >= 1024 ? index + 1 : 'auto',
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'rotate(0deg)';
-                    e.currentTarget.style.zIndex = '50';
+                    if (window.innerWidth >= 1024) {
+                      e.currentTarget.style.transform = 'rotate(0deg)';
+                      e.currentTarget.style.zIndex = '50';
+                    }
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = `rotate(${(index % 2 === 0 ? 1 : -1) * 2}deg)`;
-                    e.currentTarget.style.zIndex = `${index + 1}`;
+                    if (window.innerWidth >= 1024) {
+                      e.currentTarget.style.transform = `rotate(${(index % 2 === 0 ? 1 : -1) * 2}deg)`;
+                      e.currentTarget.style.zIndex = `${index + 1}`;
+                    }
                   }}
                 >
                   <h3
@@ -381,7 +385,7 @@ const About = () => {
             My Values
           </h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value, index) => (
               <div
                 key={index}

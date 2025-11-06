@@ -12,7 +12,6 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Programs', path: '/programs' },
-    
     { name: 'Events', path: '/events' },
     { name: 'Connect', path: '/connect' },
   ];
@@ -25,35 +24,35 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navigation Bar - Matching Image Design */}
+      {/* Navigation Bar */}
       <nav
-        className="fixed top-0 left-0 right-0 z-50 py-4 sm:py-6"
+        className="fixed top-0 left-0 right-0 z-50 py-3 sm:py-4 md:py-6"
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-6">
           <div
             className={`${
               isDark 
                 ? 'bg-gray-900 border-gray-700' 
                 : 'bg-white border-gray-200'
-            } rounded-full px-6 sm:px-8 py-3 sm:py-4 shadow-md border transition-all duration-300 ease-in-out`}
+            } rounded-full px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 shadow-md border transition-all duration-300 ease-in-out`}
           >
-            <div className="flex items-center justify-between gap-4">
-              {/* Logo / Brand Name - Left Side */}
+            <div className="flex items-center justify-between gap-2 sm:gap-3 md:gap-4">
+              {/* Logo / Brand Name */}
               <Link
                 to="/"
                 onClick={handleLinkClick}
-                className="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg px-2 py-1"
+                className="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg px-1 sm:px-2 py-1"
                 aria-label="Dr. Christos Etoka - Home"
               >
-                <span className={`font-bold text-base sm:text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                <span className={`font-bold text-sm sm:text-base md:text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   CT
                 </span>
               </Link>
 
-              {/* Desktop Navigation Links - Center */}
-              <div className="hidden md:flex items-center gap-6 lg:gap-8">
+              {/* Desktop Navigation Links */}
+              <div className="hidden lg:flex items-center gap-6 lg:gap-8">
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
@@ -75,40 +74,42 @@ const Navbar = () => {
                 ))}
               </div>
 
-              {/* Theme Toggle & Mobile Menu - Right Side */}
+              {/* Theme Toggle & Mobile Menu */}
               <div className="flex items-center gap-2 sm:gap-3">
                 {/* Theme Toggle */}
                 <button
                   onClick={toggleTheme}
-                  className={`p-2 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`p-2 sm:p-2.5 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                     isDark
-                      ? 'hover:bg-gray-800'
-                      : 'hover:bg-gray-100'
+                      ? 'bg-gray-800/50 hover:bg-gray-700 text-gray-400'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                   }`}
                   aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+                  title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
                 >
                   {isDark ? (
-                    <Sun className="w-5 h-5 text-gray-400" />
+                    <Sun className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 hover:rotate-90" />
                   ) : (
-                    <Moon className="w-5 h-5 text-gray-600" />
+                    <Moon className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 hover:rotate-12" />
                   )}
                 </button>
 
                 {/* Mobile Menu Button */}
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className={`md:hidden p-2 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`lg:hidden min-w-[40px] min-h-[40px] p-2 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300 active:scale-95 flex items-center justify-center ${
                     isDark
-                      ? 'hover:bg-gray-800 text-white'
-                      : 'hover:bg-gray-100 text-gray-900'
+                      ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                   }`}
                   aria-label="Toggle mobile menu"
                   aria-expanded={isMobileMenuOpen}
+                  type="button"
                 >
                   {isMobileMenuOpen ? (
-                    <X className="w-5 h-5" />
+                    <X className="w-5 h-5" strokeWidth={2} />
                   ) : (
-                    <Menu className="w-5 h-5" />
+                    <Menu className="w-5 h-5" strokeWidth={2} />
                   )}
                 </button>
               </div>
@@ -117,9 +118,9 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Drawer - Slide from Right */}
+      {/* Mobile Menu Drawer */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-all duration-300 ${
+        className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
           isMobileMenuOpen ? 'visible' : 'invisible'
         }`}
       >
@@ -134,24 +135,24 @@ const Navbar = () => {
 
         {/* Drawer */}
         <div
-          className={`absolute top-0 right-0 bottom-0 w-64 sm:w-72 ${
+          className={`absolute top-0 right-0 bottom-0 w-[280px] sm:w-80 ${
             isDark ? 'bg-gray-900' : 'bg-white'
           } shadow-2xl transform transition-transform duration-300 overflow-y-auto ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="p-6">
+          <div className="p-5 sm:p-6">
             {/* Close Button */}
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`absolute top-4 right-4 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              className={`absolute top-4 right-4 p-2.5 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 active:scale-95 ${
                 isDark
                   ? 'hover:bg-gray-800 text-white'
                   : 'hover:bg-gray-100 text-gray-900'
               }`}
               aria-label="Close menu"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
 
             {/* Logo in Mobile Menu */}

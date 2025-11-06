@@ -142,7 +142,7 @@ const Home = () => {
       {/* Section 1: Hero Section - Dark with geometric lines */}
       <section
   ref={heroRef}
-  className="relative min-h-screen bg-black overflow-hidden flex items-center pt-40 sm:pt-30 -mt-20 sm:-mt-24"
+  className="relative min-h-[70vh] md:min-h-screen bg-black overflow-hidden flex items-center pt-20 sm:pt-24 md:pt-40 -mt-16 sm:-mt-20 md:-mt-24"
 >
         <div className="hidden lg:block absolute text-[16rem] font-bold text-white/5 left-10 top-1/2 -translate-y-1/2 pointer-events-none select-none">
           Christos
@@ -152,19 +152,19 @@ const Home = () => {
         <div className="hidden md:block absolute h-0.5 w-32 md:w-64 bg-blue-600/20 rotate-45 top-1/3 left-20 md:left-40" />
         <div className="hidden md:block absolute h-2 w-40 md:w-80 bg-blue-600/20 -rotate-30 top-2/3 left-5 md:left-10" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-0 ">
-          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-3 space-y-4 sm:space-y-6">
-              <p className="text-gray-400 text-base sm:text-lg">Hi, I'm</p>
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 md:py-16 lg:py-0">
+          <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-center">
+            <div className="w-full lg:col-span-3 space-y-3 sm:space-y-4 md:space-y-6 text-left">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg">Hi, I'm</p>
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                 Dr. Christos Etoka
               </h1>
-              <p className="font-display text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
+              <p className="font-display text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl lg:mx-0 leading-relaxed">
                 An educator, psychologist, and thought leader transforming lives through Mind
                 Engineering and human capacity development.
               </p>
 
-              <div className="font-ui flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
+              <div className="font-ui flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-start">
                  <Link 
                     to="/connect" className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm sm:text-base w-full sm:w-auto">
                   Book A Session
@@ -182,8 +182,8 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-2 relative mt-8 lg:mt-0">
-  <div className="relative w-full aspect-[3/4] max-w-md mx-auto lg:max-w-none bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
+            <div className="w-full lg:col-span-2 relative mt-6 sm:mt-8 lg:mt-0">
+  <div className="relative w-full aspect-[3/4] max-w-[260px] sm:max-w-sm md:max-w-md mx-auto lg:max-w-none bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
     <img
       src={c13Image}
       alt="Dr. Christos Photo"
@@ -287,7 +287,7 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                       {[
                         {
                           title: 'Inner Circle',
@@ -416,12 +416,12 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="relative">
-              <div className={`${isDark ? 'bg-gray-800' : 'bg-gray-100'} rounded-2xl p-8 sm:p-12 aspect-[3/4] flex items-center justify-center`}>
-                <div className="text-center">
-                  <div className="text-6xl sm:text-8xl font-bold text-blue-600 mb-4">THE MIND MAKES THE MAN</div>
-                  <p className={`text-sm sm:text-base ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Book Cover</p>
+              <div className={`${isDark ? 'bg-gray-800' : 'bg-gray-100'} rounded-2xl p-4 sm:p-8 md:p-12 aspect-[3/4] flex items-center justify-center overflow-hidden`}>
+                <div className="text-center px-2">
+                  <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold text-blue-600 mb-2 sm:mb-4 break-words">THE MIND MAKES THE MAN</div>
+                  <p className={`text-xs sm:text-sm md:text-base ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Book Cover</p>
                 </div>
               </div>
             </div>
@@ -566,7 +566,7 @@ const Home = () => {
     <div className={`rounded-3xl overflow-hidden shadow-2xl ${
       isDark ? 'bg-gray-800' : 'bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50'
     }`}>
-      <div className="grid md:grid-cols-2 gap-0 items-center">
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-0 items-center">
         {/* Left Content */}
         <div className="font-display p-8 sm:p-12 lg:p-16 relative z-10">
           <h2 className={`font-display text-4xl sm:text-5xl lg:text-6xl font-bold ${
@@ -648,10 +648,10 @@ const Home = () => {
                   className="h-full w-auto object-contain object-bottom"
                 />
                 
-                {/* "with Sam Adeyemi" text overlay */}
-                <div className="absolute bottom-12 right-12 text-white">
-                  <p className="text-sm font-light">with</p>
-                  <p className="text-2xl font-bold">Christos Etoka</p>
+                {/* Text overlay */}
+                <div className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 md:bottom-12 md:right-12 text-white">
+                  <p className="text-xs sm:text-sm font-light">with</p>
+                  <p className="text-lg sm:text-xl md:text-2xl font-bold">Christos Etoka</p>
                 </div>
               </div>
             </div>

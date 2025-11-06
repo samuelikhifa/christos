@@ -167,7 +167,7 @@ const CookiePolicy = () => {
             <h2 className={`text-2xl sm:text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-8 text-center`}>
               Types of Cookies We Use
             </h2>
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="flex flex-col sm:grid sm:grid-cols-2 gap-6">
               {cookieTypes.map((cookie, index) => (
                 <div
                   key={index}
@@ -245,7 +245,7 @@ const CookiePolicy = () => {
             <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-6`}>
               How to Manage Cookies in Your Browser
             </h3>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="flex flex-col sm:grid sm:grid-cols-2 gap-4">
               {browserInstructions.map((instruction, index) => (
                 <div key={index} className={`${isDark ? 'bg-gray-700' : 'bg-white'} rounded-lg p-4`}>
                   <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>
