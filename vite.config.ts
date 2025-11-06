@@ -4,6 +4,9 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Ensure absolute paths for Vercel deployment
+  base: '/',
+  
   plugins: [
     react(),
     // NOTE: Image optimization plugins will be added after installation
@@ -18,6 +21,8 @@ export default defineConfig({
   
   // Build optimizations
   build: {
+    // Output directory for Vercel
+    outDir: 'dist',
     // Enable code splitting
     rollupOptions: {
       output: {
