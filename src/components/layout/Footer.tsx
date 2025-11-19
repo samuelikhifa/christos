@@ -33,11 +33,11 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Youtube, href: '#', label: 'YouTube' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/dr-christos-etoka-o-etoka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://x.com/iamdrchristos?t=ICogyJvieXxS5y9IvSQ2qw&s=09', label: 'Twitter' },
+    { icon: Facebook, href: 'https://www.facebook.com/share/1A7n5UZPRe/', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/therealdretoka?igsh=d3ZiMmR1eWpkbXJh', label: 'Instagram' },
+    { icon: Youtube, href: 'https://www.youtube.com/@therealdretoka', label: 'YouTube' },
   ];
 
   return (
@@ -91,9 +91,9 @@ const Footer = () => {
               <h4 className="font-ui font-semibold text-gray-300 text-sm mb-2">Legal</h4>
               <ul className="space-y-2">
                 {[
-                  { name: 'Terms of Service', path: '/terms-of-service' },
-                  { name: 'Privacy Policy', path: '/privacy-policy' },
-                  { name: 'Cookie Policy', path: '/cookie-policy' }
+                  { name: 'Terms of Service', path: '' },
+                  { name: 'Privacy Policy', path: '' },
+                  { name: 'Cookie Policy', path: '' }
                 ].map((item) => (
                   <li key={item.name}>
                     <Link
@@ -119,7 +119,8 @@ const Footer = () => {
                     href="mailto:info@christosetoka.com"
                     className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-300 block"
                   >
-                    info@christosetoka.com
+                    Drchristos5689@gmail.com
+
                   </a>
                 </div>
               </li>
@@ -130,16 +131,16 @@ const Footer = () => {
                     href="tel:+234-XXX-XXXX-XXX"
                     className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-300 block"
                   >
-                    +234-XXX-XXXX-XXX
+                    +234 815 703 7134
                   </a>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400 text-sm">
-                  <p>Abuja, Nigeria (HQ)</p>
-                  <p>Benin City, Nigeria</p>
-                  <p>Manchester, UK</p>
+                  <p>Xrislid Institute of Mind Engineering –Novare Central Mall, Wuse Zone 5, Federal Capital Territory, Abuja, Nigeria (HQ)</p> <br/>
+                  {/* <p>Xrislid Institute of Mind Engineering –No. 59C, I.C.E. Road, Off Wire Road, Benin City, 300271, Edo State, Nigeria.</p> */}
+                  <p>Xrislid Institute of Mind Engineering –Learning Hall, Unit 15, Academic Park, 43 Chapel Street, Manchester, M3 5DF, United Kingdom.</p>
                 </div>
               </li>
             </ul>

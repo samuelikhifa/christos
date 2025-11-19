@@ -10,7 +10,7 @@ const STATIC_ASSETS = [
   '/',
   '/about',
   '/programs',
-  '/resources',
+ 
   '/events',
   '/connect',
   '/manifest.json',

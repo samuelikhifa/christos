@@ -22,7 +22,7 @@ const Connect = () => {
   });
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  
+
   const heroRef = useRef(null);
   const formRef = useRef(null);
   const coachingRef = useRef(null);
@@ -33,7 +33,7 @@ const Connect = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitStatus('sending');
-    
+
     setTimeout(() => {
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', subject: '', message: '', consent: false });
@@ -58,10 +58,10 @@ const Connect = () => {
       question: 'Can Dr. Christos train my team, or do you offer training programs?',
       answer: 'Absolutely! Contact our team with your request, and we\'ll provide details and schedule your team.',
     },
-   {
-  question: 'Can I attend Xrislid’s Mind Engineering University?',
-  answer: 'Yes, admission is open to individuals passionate about personal growth and leadership transformation. Please visit our admissions page for enrollment details and program dates.',
-},
+    {
+      question: 'Can I attend Xrislid’s Mind Engineering University?',
+      answer: 'Yes, admission is open to individuals passionate about personal growth and leadership transformation. Please visit our admissions page for enrollment details and program dates.',
+    },
 
   ];
 
@@ -80,7 +80,7 @@ const Connect = () => {
   return (
     <main id="main-content" className={isDark ? 'bg-gray-900' : 'bg-white'}>
       {/* Section 1: Hero - Soft gradient with floating orbs */}
-     <section
+      <section
         ref={heroRef}
         className="relative min-h-[70vh] md:min-h-screen bg-black overflow-hidden flex items-center pt-20 sm:pt-24 md:pt-40 -mt-16 sm:-mt-20 md:-mt-24"
       >
@@ -95,9 +95,9 @@ const Connect = () => {
             <div className="w-full lg:col-span-3 space-y-3 sm:space-y-4 md:space-y-6 text-left">
               <p className="text-gray-400 text-sm sm:text-base md:text-lg italic">Connect</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-               Get In Touch
+                Get In Touch
               </h1>
-              
+
               <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl lg:mx-0">
                 A Conversation Around Transformation.
               </p>
@@ -109,7 +109,7 @@ const Connect = () => {
       {/* Section 2: Executive Coaching CTA - Dynamic blue gradient */}
       <section ref={coachingRef} className="relative bg-gradient-to-br from-blue-800 via-blue-400 to-blue-600 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-500 opacity-50" />
-        
+
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex flex-col md:grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Image */}
@@ -155,11 +155,13 @@ const Connect = () => {
       </section>
 
       {/* Section 3: Contact Form - Grid pattern with diagonal accent */}
-      <section
+      <form
         ref={formRef}
-        className={`relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${
-          isDark ? 'bg-black' : 'bg-gray-50'
-        }`}
+        onSubmit={handleSubmit}
+        action="https://formspree.io/f/manveznp"   // <-- PUT CLIENT FORM ENDPOINT HERE
+        method="POST"
+        className={`relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${isDark ? 'bg-black' : 'bg-gray-50'
+          }`}
       >
         {/* Grid pattern overlay */}
         <div
@@ -187,35 +189,35 @@ const Connect = () => {
                 <h3 className={`text-xl sm:text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-4`}>
                   Message Sent Successfully!
                 </h3>
-              
+
               </div>
             ) : (
               <div className="space-y-6">
                 <div>
                   <label className={`block font-semibold ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 text-sm sm:text-base`}>
-                    Full Name *
+                    Full Name 
                   </label>
                   <input
+                    name="name"
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-lg ${
-                      isDark ? 'bg-black border-gray-800 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'
-                    } border-2 focus:outline-none focus:border-blue-500 transition-colors duration-300`}
+                    className={`w-full px-4 py-3 rounded-lg ${isDark ? 'bg-black border-gray-800 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'
+                      } border-2 focus:outline-none focus:border-blue-500 transition-colors duration-300`}
                   />
                 </div>
 
                 <div>
                   <label className={`block font-semibold ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 text-sm sm:text-base`}>
-                    Email Address *
+                    Email Address 
                   </label>
                   <input
+                    name="email"
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-lg ${
-                      isDark ? 'bg-black border-gray-800 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'
-                    } border-2 focus:outline-none focus:border-blue-500 transition-colors duration-300`}
+                    className={`w-full px-4 py-3 rounded-lg ${isDark ? 'bg-black border-gray-800 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'
+                      } border-2 focus:outline-none focus:border-blue-500 transition-colors duration-300`}
                   />
                 </div>
 
@@ -224,25 +226,24 @@ const Connect = () => {
                     Phone Number
                   </label>
                   <input
+                    name="phone"
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-lg ${
-                      isDark ? 'bg-black border-gray-800 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'
-                    } border-2 focus:outline-none focus:border-blue-500 transition-colors duration-300`}
+                    className={`w-full px-4 py-3 rounded-lg ${isDark ? 'bg-black border-gray-800 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'
+                      } border-2 focus:outline-none focus:border-blue-500 transition-colors duration-300`}
                   />
                 </div>
 
                 <div>
                   <label className={`block font-semibold ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 text-sm sm:text-base`}>
-                    Subject *
+                    Subject 
                   </label>
                   <select
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-lg ${
-                      isDark ? 'bg-black border-gray-800 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'
-                    } border-2 focus:outline-none focus:border-blue-500 transition-colors duration-300`}
+                    className={`w-full px-4 py-3 rounded-lg ${isDark ? 'bg-black border-gray-800 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'
+                      } border-2 focus:outline-none focus:border-blue-500 transition-colors duration-300`}
                   >
                     <option value="">Select a subject</option>
                     <option value="general">General Inquiry</option>
@@ -256,15 +257,14 @@ const Connect = () => {
 
                 <div>
                   <label className={`block font-semibold ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 text-sm sm:text-base`}>
-                    Message *
+                    Message 
                   </label>
                   <textarea
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={6}
-                    className={`w-full px-4 py-3 rounded-lg ${
-                      isDark ? 'bg-black border-gray-800 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'
-                    } border-2 focus:outline-none focus:border-blue-500 transition-colors duration-300`}
+                    className={`w-full px-4 py-3 rounded-lg ${isDark ? 'bg-black border-gray-800 text-white' : 'bg-gray-50 border-gray-300 text-gray-900'
+                      } border-2 focus:outline-none focus:border-blue-500 transition-colors duration-300`}
                   />
                 </div>
 
@@ -281,7 +281,7 @@ const Connect = () => {
                 </div>
 
                 <button
-                  onClick={handleSubmit}
+                  type="submit"
                   disabled={submitStatus === 'sending'}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg font-bold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
@@ -298,19 +298,18 @@ const Connect = () => {
                   )}
                 </button>
 
-               
+
               </div>
             )}
           </div>
         </div>
-      </section>
+      </form>
 
       {/* Section 4: FAQ - Radial gradient with geometric shapes */}
       <section
         ref={faqRef}
-        className={`relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${
-          isDark ? 'bg-gray-900' : 'bg-white'
-        }`}
+        className={`relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${isDark ? 'bg-gray-900' : 'bg-white'
+          }`}
       >
         {/* Radial gradient backgrounds */}
         <div className="absolute top-0 left-0 w-full h-full">
@@ -330,11 +329,9 @@ const Connect = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className={`${
-                  isDark ? 'bg-black' : 'bg-gray-50'
-                } rounded-xl overflow-hidden transition-all duration-300 ${
-                  openFaq === index ? 'shadow-xl' : 'shadow-md'
-                }`}
+                className={`${isDark ? 'bg-black' : 'bg-gray-50'
+                  } rounded-xl overflow-hidden transition-all duration-300 ${openFaq === index ? 'shadow-xl' : 'shadow-md'
+                  }`}
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -363,9 +360,8 @@ const Connect = () => {
       {/* Section 5: Press - Dotted pattern with corner accents */}
       <section
         ref={pressRef}
-        className={`relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${
-          isDark ? 'bg-black' : 'bg-gray-50'
-        }`}
+        className={`relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${isDark ? 'bg-black' : 'bg-gray-50'
+          }`}
       >
         {/* Dotted pattern */}
         <div
@@ -393,23 +389,23 @@ const Connect = () => {
               </p>
 
               <p className={`text-base sm:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
-               As the Executive Vice Chancellor of Xrislid Institute of Mind Engineering, he leads a revolutionary educational model that transcends traditional learning — focusing on reprogramming the mind, revamping thought patterns, and cultivating transformational thinkers for the 21st century.
+                As the Executive Vice Chancellor of Xrislid Institute of Mind Engineering, he leads a revolutionary educational model that transcends traditional learning — focusing on reprogramming the mind, revamping thought patterns, and cultivating transformational thinkers for the 21st century.
               </p>
 
               <p className={`text-base sm:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
-               Dr. Christos holds an M.Sc. in Social Psychology from the University of Manchester, UK, and has built a distinguished career at the intersection of psychology, education, and leadership. His expertise spans mental reformation, behavioral psychology, leadership development, and transformational education.
+                Dr. Christos holds an M.Sc. in Social Psychology from the University of Manchester, UK, and has built a distinguished career at the intersection of psychology, education, and leadership. His expertise spans mental reformation, behavioral psychology, leadership development, and transformational education.
 
-Beyond academia, his thought-provoking insights have earned him numerous honors, including the President’s Award for Distinguished Contributions to Psychological Knowledge from the British Psychological Society, and the Man of the Year in Human Capacity Development (2023/2024).
+                Beyond academia, his thought-provoking insights have earned him numerous honors, including the President’s Award for Distinguished Contributions to Psychological Knowledge from the British Psychological Society, and the Man of the Year in Human Capacity Development (2023/2024).
               </p>
 
               <p className={`text-base sm:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
                 Through his books, speeches, and mentorship, Dr. Christos continues to empower individuals to reshape their thinking, break mental limitations, and unlock their fullest potential. His impact extends to leaders, students, and professionals across Africa and beyond.
 
-He is the author of “The Mind Makes the Man”, a groundbreaking work on the power of thought, mindset transformation, and the science of mental re-engineering.
+                He is the author of “The Mind Makes the Man”, a groundbreaking work on the power of thought, mindset transformation, and the science of mental re-engineering.
               </p>
             </div>
 
-           
+
           </div>
         </div>
       </section>
@@ -417,9 +413,8 @@ He is the author of “The Mind Makes the Man”, a groundbreaking work on the p
       {/* Section 6: Gallery - Animated gradient blobs */}
       <section
         ref={galleryRef}
-        className={`relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${
-          isDark ? 'bg-gray-900' : 'bg-white'
-        }`}
+        className={`relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${isDark ? 'bg-gray-900' : 'bg-white'
+          }`}
       >
         {/* Animated gradient blobs */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-300/30 to-purple-300/30 rounded-full blur-3xl animate-pulse"></div>
@@ -439,8 +434,8 @@ He is the author of “The Mind Makes the Man”, a groundbreaking work on the p
                 key={index}
                 className="group relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer"
               >
-                <img 
-                  src={image} 
+                <img
+                  src={image}
                   alt={`Gallery image ${index + 1}`}
                   className="w-full h-full object-cover"
                 />

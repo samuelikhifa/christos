@@ -39,8 +39,8 @@ const SEOHead = ({
     'mindset coaching',
     'business leadership'
   ],
-  image = 'https://christosetoka.com/og-image.jpg',
-  url = 'https://christosetoka.com',
+  image = 'https://drchristos.xmindengineering.org/og-image.jpg',
+  url = 'https://drchristos.xmindengineering.org',
   type = 'website',
   author = 'Dr. Christos Etoka O. Etoka',
   publishedTime,
@@ -78,10 +78,12 @@ const SEOHead = ({
           description: 'World-renowned leader in Mind Engineering and Transformational Leadership'
         },
         sameAs: [
-          'https://linkedin.com/in/christosetoka',
-          'https://twitter.com/christosetoka',
-          'https://facebook.com/christosetoka',
-          'https://instagram.com/christosetoka'
+           'https://www.linkedin.com/in/dr-christos-etoka-o-etoka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+          'https://x.com/iamdrchristos?t=ICogyJvieXxS5y9IvSQ2qw&s=09',
+          'https://www.facebook.com/share/1A7n5UZPRe/',
+          'https://www.instagram.com/therealdretoka?igsh=d3ZiMmR1eWpkbXJh',
+          'https://www.tiktok.com/@therealdretoka?_r=1&_t=ZS-91IBjr6XKgJ',
+          'https://www.youtube.com/@therealdretoka'
         ]
       },
       {
@@ -96,10 +98,12 @@ const SEOHead = ({
         image: image,
         url: url,
         sameAs: [
-          'https://linkedin.com/in/christosetoka',
-          'https://twitter.com/christosetoka',
-          'https://facebook.com/christosetoka',
-          'https://instagram.com/christosetoka'
+          'https://www.linkedin.com/in/dr-christos-etoka-o-etoka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+          'https://x.com/iamdrchristos?t=ICogyJvieXxS5y9IvSQ2qw&s=09',
+          'https://www.facebook.com/share/1A7n5UZPRe/',
+          'https://www.instagram.com/therealdretoka?igsh=d3ZiMmR1eWpkbXJh',
+          'https://www.tiktok.com/@therealdretoka?_r=1&_t=ZS-91IBjr6XKgJ',
+          'https://www.youtube.com/@therealdretoka'
         ],
         knowsAbout: [
           'Mind Engineering',
@@ -196,13 +200,13 @@ const SEOHead = ({
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.youtube.com" />
-      <link rel="preconnect" href="https://img.youtube.com" />
+      <link rel="preconnect" href="https://www.youtube.com/@therealdretoka" />
+      <link rel="preconnect" href="https://www.youtube.com/@therealdretoka" />
       
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="https://www.youtube.com" />
+      <link rel="dns-prefetch" href="https://www.youtube.com/@therealdretoka" />
       
       {/* Structured Data */}
       <script type="application/ld+json">

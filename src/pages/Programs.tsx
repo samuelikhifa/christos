@@ -101,7 +101,7 @@ const Programs = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 md:py-16 lg:py-0">
           <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="w-full lg:col-span-3 space-y-3 sm:space-y-4 md:space-y-6 text-left">
-              <p className="text-gray-400 text-sm sm:text-base md:text-lg italic">Programs</p>
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg italic mt-16">Programs</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                  Programs & Training
               </h1>

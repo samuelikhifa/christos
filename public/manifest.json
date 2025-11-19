@@ -113,19 +113,8 @@
           "sizes": "96x96"
         }
       ]
-    },
-    {
-      "name": "Resources",
-      "short_name": "Resources",
-      "description": "Access books, articles, and videos",
-      "url": "/resources",
-      "icons": [
-        {
-          "src": "/icons/shortcut-resources.png",
-          "sizes": "96x96"
-        }
-      ]
     }
+
   ],
   "related_applications": [
     {

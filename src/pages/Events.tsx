@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { Clock, MapPin, Calendar,  ArrowRight } from 'lucide-react';
+import { Clock, MapPin, Calendar, ArrowRight } from 'lucide-react';
 import tsImage from '@/assets/ts.jpg'
 import c20Image from '@/assets/c20.jpg'
 import c22Image from '@/assets/c22.webp'
@@ -25,7 +25,7 @@ const Events = () => {
     budgetRange: '',
     eventType: '',
   });
-  
+
   const heroRef = useRef(null);
   const featuredRef = useRef(null);
   const upcomingRef = useRef(null);
@@ -83,7 +83,7 @@ const Events = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 md:py-16 lg:py-0">
           <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="w-full lg:col-span-3 space-y-3 sm:space-y-4 md:space-y-6 text-left">
-              <p className="text-gray-400 text-sm sm:text-base md:text-lg italic">Events</p>
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg italic mt-16">Events</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Transforming Minds
               </h1>
@@ -99,78 +99,78 @@ const Events = () => {
       </section>
 
       {/* Section 2: Featured Event -  Conference with Video */}
-<section
-  ref={featuredRef}
-  className="relative min-h-screen bg-black overflow-hidden flex items-center justify-center -mt-20 sm:-mt-24"
->
-  <div className="max-w-7xl mx-auto w-full relative z-10">
-    <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
-      {/* Left - Text */}
-      <div className="relative">
-        <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-none">
-          A<br />
-          Podcast<br />
-          Session
-        </h2>
-        <button 
-          onClick={() => setIsVideoPlaying(true)}
-          className="absolute -top-4 -right-16 w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-300 group shadow-lg"
-        >
-          <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 text-black group-hover:text-white" />
-        </button>
-      </div>
+      <section
+        ref={featuredRef}
+        className="relative min-h-screen bg-black overflow-hidden flex items-center justify-center -mt-20 sm:-mt-24"
+      >
+        <div className="max-w-7xl mx-auto w-full relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
+            {/* Left - Text */}
+            <div className="relative">
+              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-none">
+                A<br />
+                Podcast<br />
+                Session
+              </h2>
+              <button
+                onClick={() => setIsVideoPlaying(true)}
+                className="absolute -top-4 -right-16 w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-300 group shadow-lg"
+              >
+                <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 text-black group-hover:text-white" />
+              </button>
+            </div>
 
-      {/* Right - Video Player */}
-      <div className="relative">
-        <div className="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] aspect-video rounded-3xl overflow-hidden shadow-2xl">
-          
-          {/* Show thumbnail when not playing */}
-          {!isVideoPlaying ? (
-            <div 
-              onClick={() => setIsVideoPlaying(true)}
-              className="w-full h-full bg-gradient-to-br from-blue-800 via-purple-700 to-pink-700 relative cursor-pointer group"
-            >
-              <div className="absolute inset-0 bg-black/20"></div>
-              
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-400/30 blur-3xl"></div>
-              </div>
-              
-              <div className="absolute bottom-6 left-6 bg-red-600 px-4 py-2 rounded flex items-center space-x-2">
-                <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
-                  <span className="text-red-600 font-bold text-xs">▶</span>
-                </div>
-                <span className="text-white font-bold text-sm tracking-wider">Nugest</span>
-                <span className="text-white text-xs">Video</span>
-              </div>
-              
-              {/* Play button overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-all duration-300">
-                <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
-                  <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-blue-600 border-b-[12px] border-b-transparent ml-1"></div>
-                </div>
+            {/* Right - Video Player */}
+            <div className="relative">
+              <div className="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] aspect-video rounded-3xl overflow-hidden shadow-2xl">
+
+                {/* Show thumbnail when not playing */}
+                {!isVideoPlaying ? (
+                  <div
+                    onClick={() => setIsVideoPlaying(true)}
+                    className="w-full h-full bg-gradient-to-br from-blue-800 via-purple-700 to-pink-700 relative cursor-pointer group"
+                  >
+                    <div className="absolute inset-0 bg-black/20"></div>
+
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-48 h-48 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-400/30 blur-3xl"></div>
+                    </div>
+
+                    <div className="absolute bottom-6 left-6 bg-red-600 px-4 py-2 rounded flex items-center space-x-2">
+                      <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                        <span className="text-red-600 font-bold text-xs">▶</span>
+                      </div>
+                      <span className="text-white font-bold text-sm tracking-wider">Nugest</span>
+                      <span className="text-white text-xs">Video</span>
+                    </div>
+
+                    {/* Play button overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-all duration-300">
+                      <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                        <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-blue-600 border-b-[12px] border-b-transparent ml-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  // Show video when playing
+                  <div className="w-full h-full relative">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/YM9wNnZmy9k?autoplay=1&rel=0"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
+                  </div>
+                )}
+
               </div>
             </div>
-          ) : (
-            // Show video when playing
-            <div className="w-full h-full relative">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/YM9wNnZmy9k?autoplay=1&rel=0"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
-          )}
-          
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Section 3: Upcoming Events - Three Card Grid with Flip */}
       <section
@@ -184,9 +184,8 @@ const Events = () => {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <h2
-            className={`font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-center ${
-              isDark ? 'text-white' : 'text-gray-900'
-            } mb-12 sm:mb-16`}
+            className={`font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-center ${isDark ? 'text-white' : 'text-gray-900'
+              } mb-12 sm:mb-16`}
           >
             Upcoming Events
           </h2>
@@ -199,9 +198,8 @@ const Events = () => {
                 style={{ perspective: '1000px' }}
               >
                 <div
-                  className={`relative w-full h-full transition-transform duration-700 ${
-                    flippedCards[index] ? 'rotate-y-180' : ''
-                  }`}
+                  className={`relative w-full h-full transition-transform duration-700 ${flippedCards[index] ? 'rotate-y-180' : ''
+                    }`}
                   style={{ transformStyle: 'preserve-3d' }}
                 >
                   {/* Front of card */}
@@ -210,19 +208,19 @@ const Events = () => {
                     style={{ backfaceVisibility: 'hidden' }}
                   >
                     {/* Background Image */}
-                    <img 
-                      src={event.image} 
+                    <img
+                      src={event.image}
                       alt={event.title}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
-                    
+
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
-                    
+
                     <div className="absolute inset-0 flex flex-col justify-between p-6">
                       {/* Flyer placeholder - Replace with actual image */}
                       <div className="flex-1 flex items-center justify-center">
-                        
+
                       </div>
 
                       {/* Bottom info */}
@@ -253,12 +251,12 @@ const Events = () => {
                     style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                   >
                     {/* Background Image for back */}
-                    <img 
-                      src={event.image} 
+                    <img
+                      src={event.image}
                       alt={event.title}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
-                    
+
                     <div className="absolute inset-0 flex flex-col justify-between p-6 bg-gradient-to-br from-black/90 to-black/80">
                       <button
                         onClick={() => toggleFlip(index)}
@@ -284,7 +282,7 @@ const Events = () => {
                             <MapPin className="w-5 h-5 mr-3 text-blue-400" />
                             <span className="text-sm">{event.location}</span>
                           </div>
-                         
+
                         </div>
                       </div>
 
@@ -301,8 +299,10 @@ const Events = () => {
       </section>
 
       {/* Section 4: Book Dr. Christos - Enhanced with creative elements */}
-      <section
+      <form
         ref={bookingRef}
+        action="https://formspree.io/f/xblwgeyo"   // <-- your Formspree URL
+        method="POST"
         className="font-display relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700"
       >
         {/* Animated gradient backgrounds */}
@@ -355,6 +355,7 @@ const Events = () => {
                   <div>
                     <label className="block text-sm font-semibold mb-2">First Name *</label>
                     <input
+                      name="firstName"
                       type="text"
                       value={bookingForm.firstName}
                       onChange={(e) =>
@@ -367,6 +368,7 @@ const Events = () => {
                   <div>
                     <label className="block text-sm font-semibold mb-2">Last Name *</label>
                     <input
+                      name="lastName"
                       type="text"
                       value={bookingForm.lastName}
                       onChange={(e) =>
@@ -380,8 +382,9 @@ const Events = () => {
 
                 {/* Organization */}
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Organization *</label>
+                  <label className="block text-sm font-semibold mb-2">Organization </label>
                   <input
+                    name="organization"
                     type="text"
                     value={bookingForm.organization}
                     onChange={(e) =>
@@ -394,8 +397,9 @@ const Events = () => {
 
                 {/* Job Title */}
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Job Title *</label>
+                  <label className="block text-sm font-semibold mb-2">Job Title </label>
                   <input
+                    name="jobTitle"
                     type="text"
                     value={bookingForm.jobTitle}
                     onChange={(e) => setBookingForm({ ...bookingForm, jobTitle: e.target.value })}
@@ -406,8 +410,9 @@ const Events = () => {
 
                 {/* Phone */}
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Phone *</label>
+                  <label className="block text-sm font-semibold mb-2">Phone </label>
                   <input
+                    name="phone"
                     type="tel"
                     value={bookingForm.phone}
                     onChange={(e) => setBookingForm({ ...bookingForm, phone: e.target.value })}
@@ -418,8 +423,9 @@ const Events = () => {
 
                 {/* Topic of Interest */}
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Topic of Interest *</label>
+                  <label className="block text-sm font-semibold mb-2">Topic of Interest </label>
                   <input
+                    name="topicOfInterest"
                     type="text"
                     value={bookingForm.topicOfInterest}
                     onChange={(e) =>
@@ -433,8 +439,9 @@ const Events = () => {
                 {/* Date & Location */}
                 <div className="flex flex-col sm:grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold mb-2">Event Date *</label>
+                    <label className="block text-sm font-semibold mb-2">Event Date </label>
                     <input
+                    name="eventDate"
                       type="date"
                       value={bookingForm.eventDate}
                       onChange={(e) =>
@@ -444,8 +451,9 @@ const Events = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-2">Location *</label>
+                    <label className="block text-sm font-semibold mb-2">Location </label>
                     <input
+                    name="eventLocation"
                       type="text"
                       value={bookingForm.eventLocation}
                       onChange={(e) =>
@@ -460,8 +468,9 @@ const Events = () => {
                 {/* Attendees & Budget */}
                 <div className="flex flex-col sm:grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold mb-2">Attendees *</label>
+                    <label className="block text-sm font-semibold mb-2">Attendees </label>
                     <input
+                    name="numAttendees"
                       type="number"
                       value={bookingForm.numAttendees}
                       onChange={(e) =>
@@ -472,7 +481,7 @@ const Events = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-2">Budget Range *</label>
+                    <label className="block text-sm font-semibold mb-2">Budget Range </label>
                     <select
                       value={bookingForm.budgetRange}
                       onChange={(e) =>
@@ -491,7 +500,7 @@ const Events = () => {
 
                 {/* Type of Event */}
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Type of Event or Theme *</label>
+                  <label className="block text-sm font-semibold mb-2">Type of Event or Theme </label>
                   <select
                     value={bookingForm.eventType}
                     onChange={(e) => setBookingForm({ ...bookingForm, eventType: e.target.value })}
@@ -505,15 +514,16 @@ const Events = () => {
                   </select>
                 </div>
 
-                <button className="w-full bg-white text-blue-600 hover:bg-blue-50 px-6 py-4 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-xl mt-2 flex items-center justify-center group">
-                  <span>Submit Booking Request</span>
+                <button className="w-full bg-white text-blue-600 hover:bg-blue-50 px-5 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-xl mt-2 flex items-center justify-center group">
+                  <span className="text-xs sm:text-sm">Submit Booking Request</span>
+
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </form>
     </main>
   );
 };

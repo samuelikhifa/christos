@@ -128,7 +128,7 @@ const About = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 md:py-16 lg:py-0">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="w-full space-y-3 sm:space-y-4 md:space-y-6 text-left">
-              <p className="text-gray-400 text-sm sm:text-base md:text-lg italic">About</p>
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg italic mt-16">About</p>
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                 Dr. Christos Etoka
               </h1>
@@ -137,25 +137,26 @@ const About = () => {
                 potential through Mind Engineering.
               </p>
             </div>
-
-           <div className="w-full relative aspect-square max-w-[260px] sm:max-w-sm md:max-w-md mx-auto lg:max-w-none bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
-  <img
-    src={c12Image}
-    alt="Professional Portrait"
-    className="absolute inset-0 w-full h-full object-cover"
-  />
-</div>
-
-          </div>
-        </div>
+            {/* <div className=" sm:mt-8 lg:mt-16"> */}
+              <div className="w-full relative aspect-square sm:mt-8 lg:mt-16 max-w-[260px] sm:max-w-sm md:max-w-md mx-auto lg:max-w-none bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
+                <img
+                  src={c12Image}
+                  alt="Professional Portrait"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
+              </div>
+            </div>
+          {/* </div> */}
+        {/* </div> */}
       </section>
 
       {/* Section 2: The Story - Soft gradient with floating orbs */}
       <section
         ref={storyRef}
-        className={`relative py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${
-          isDark ? 'bg-gray-900' : 'bg-gradient-to-br from-white via-blue-50 to-white'
-        }`}
+        className={`relative py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${isDark ? 'bg-gray-900' : 'bg-gradient-to-br from-white via-blue-50 to-white'
+          }`}
       >
         {/* Decorative floating orbs */}
         <div className="absolute top-20 right-10 w-64 h-64 bg-blue-200/30 rounded-full blur-3xl"></div>
@@ -166,24 +167,20 @@ const About = () => {
           <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Large Bio Block */}
             <div
-              className={`lg:col-span-2 ${
-                isDark ? 'bg-black' : 'bg-white'
-              } rounded-2xl p-6 sm:p-8 lg:p-12 shadow-lg transition-all duration-700 ${
-                visibleSections.story ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
+              className={`lg:col-span-2 ${isDark ? 'bg-black' : 'bg-white'
+                } rounded-2xl p-6 sm:p-8 lg:p-12 shadow-lg transition-all duration-700 ${visibleSections.story ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
             >
               <h2
-                className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${
-                  isDark ? 'text-white' : 'text-gray-900'
-                } mb-6 sm:mb-8`}
+                className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'
+                  } mb-6 sm:mb-8`}
               >
                 The Story
               </h2>
               <div className="space-y-4 sm:space-y-6">
                 <p
-                  className={`font-body text-base sm:text-lg ${
-                    isDark ? 'text-gray-300' : 'text-gray-700'
-                  } leading-relaxed`}
+                  className={`font-body text-base sm:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'
+                    } leading-relaxed`}
                 >
                   Dr. Christos Etoka O. Etoka is a distinguished educator, psychologist, and thought
                   leader whose work has transformed thousands of lives across continents. With over 30
@@ -192,18 +189,16 @@ const About = () => {
                   excellence.
                 </p>
                 <p
-                  className={`font-body text-base sm:text-lg ${
-                    isDark ? 'text-gray-300' : 'text-gray-700'
-                  } leading-relaxed`}
+                  className={`font-body text-base sm:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'
+                    } leading-relaxed`}
                 >
                   His academic journey culminated in a Master of Science in Social Psychology from the
                   prestigious University of Manchester, UK, where he deepened his understanding of
                   human behavior, group dynamics, and the psychological foundations of leadership.
                 </p>
                 <p
-                  className={`text-base sm:text-lg ${
-                    isDark ? 'text-gray-300' : 'text-gray-700'
-                  } leading-relaxed`}
+                  className={`text-base sm:text-lg ${isDark ? 'text-gray-300' : 'text-gray-700'
+                    } leading-relaxed`}
                 >
                   As the Executive Vice Chancellor of Xrislid Institute of Mind Engineering, Dr.
                   Christos leads a movement that challenges conventional thinking and empowers
@@ -216,20 +211,19 @@ const About = () => {
 
             {/* Photo Block */}
             <div
-            
+
               style={{ transitionDelay: '0.2s' }}
             >
-              <div className="aspect-[4/2]  flex items-center justify-center text-white text-lg">
-                
+              <div className="aspect-[4/2]  flex items-center justify-center text-white text-lg mt-0">
+
               </div>
               <img src={c10Image} alt="the story" />
             </div>
 
             {/* Quote Block */}
             <div
-              className={`lg:col-span-3 bg-gradient-to-br from-blue-800 via-blue-400 to-blue-600 rounded-2xl p-8 sm:p-12 shadow-lg transition-all duration-700 ${
-                visibleSections.story ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
+              className={`lg:col-span-3 bg-gradient-to-br from-blue-800 via-blue-400 to-blue-600 rounded-2xl p-8 sm:p-12 shadow-lg transition-all duration-700 ${visibleSections.story ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
               style={{ transitionDelay: '0.4s' }}
             >
               <blockquote className="text-center">
@@ -247,9 +241,8 @@ const About = () => {
       {/* Section 3: Philosophy - Grid pattern with image and cards */}
       <section
         ref={philosophyRef}
-        className={`relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden ${
-          isDark ? 'bg-black' : 'bg-gray-100'
-        }`}
+        className={`relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden ${isDark ? 'bg-black' : 'bg-gray-100'
+          }`}
       >
         {/* Grid pattern overlay */}
         <div
@@ -266,9 +259,8 @@ const About = () => {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <h2
-            className={`font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-center ${
-              isDark ? 'text-white' : 'text-gray-900'
-            } mb-10 sm:mb-16`}
+            className={`font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-center ${isDark ? 'text-white' : 'text-gray-900'
+              } mb-10 sm:mb-16`}
           >
             My Philosophy
           </h2>
@@ -313,13 +305,10 @@ const About = () => {
               ].map((philosophy, index) => (
                 <div
                   key={index}
-                  className={`lg:absolute lg:left-0 lg:right-0 ${
-                    isDark ? 'bg-gray-900 hover:bg-gray-800' : 'bg-white hover:bg-gray-50'
-                  } rounded-2xl p-6 sm:p-8 shadow-xl border-l-4 ${
-                    philosophy.accent
-                  } cursor-pointer transition-all duration-500 lg:hover:scale-105 lg:hover:z-50 ${
-                    visibleSections.philosophy ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className={`lg:absolute lg:left-0 lg:right-0 ${isDark ? 'bg-gray-900 hover:bg-gray-800' : 'bg-white hover:bg-gray-50'
+                    } rounded-2xl p-6 sm:p-8 shadow-xl border-l-4 ${philosophy.accent
+                    } cursor-pointer transition-all duration-500 lg:hover:scale-105 lg:hover:z-50 ${visibleSections.philosophy ? 'opacity-100' : 'opacity-0'
+                    }`}
                   style={{
                     top: window.innerWidth >= 1024 ? `${index * 80}px` : 'auto',
                     transform: window.innerWidth >= 1024 ? `rotate(${(index % 2 === 0 ? 1 : -1) * 2}deg)` : 'none',
@@ -340,16 +329,14 @@ const About = () => {
                   }}
                 >
                   <h3
-                    className={`text-xl sm:text-2xl font-bold ${
-                      isDark ? 'text-white' : 'text-gray-900'
-                    } mb-3 sm:mb-4`}
+                    className={`text-xl sm:text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'
+                      } mb-3 sm:mb-4`}
                   >
                     {philosophy.title}
                   </h3>
                   <p
-                    className={`text-sm sm:text-base ${
-                      isDark ? 'text-gray-400' : 'text-gray-600'
-                    } leading-relaxed`}
+                    className={`text-sm sm:text-base ${isDark ? 'text-gray-400' : 'text-gray-600'
+                      } leading-relaxed`}
                   >
                     {philosophy.desc}
                   </p>
@@ -363,9 +350,8 @@ const About = () => {
       {/* Section 4: My Values - Radial gradient with geometric shapes */}
       <section
         ref={valuesRef}
-        className={`relative py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${
-          isDark ? 'bg-gray-900' : 'bg-white'
-        }`}
+        className={`relative py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${isDark ? 'bg-gray-900' : 'bg-white'
+          }`}
       >
         {/* Radial gradient backgrounds */}
         <div className="absolute top-0 left-0 w-full h-full">
@@ -378,9 +364,8 @@ const About = () => {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <h2
-            className={`font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-center ${
-              isDark ? 'text-white' : 'text-gray-900'
-            } mb-10 sm:mb-16`}
+            className={`font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-center ${isDark ? 'text-white' : 'text-gray-900'
+              } mb-10 sm:mb-16`}
           >
             My Values
           </h2>
@@ -389,11 +374,9 @@ const About = () => {
             {values.map((value, index) => (
               <div
                 key={index}
-                className={`group ${
-                  isDark ? 'bg-black' : 'bg-gray-50'
-                } rounded-2xl p-6 sm:p-8 transition-all duration-500 hover:scale-105 hover:shadow-2xl ${
-                  visibleSections.values ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                className={`group ${isDark ? 'bg-black' : 'bg-gray-50'
+                  } rounded-2xl p-6 sm:p-8 transition-all duration-500 hover:scale-105 hover:shadow-2xl ${visibleSections.values ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
                 style={{ transitionDelay: `${index * 0.1}s` }}
               >
                 <div
@@ -402,16 +385,14 @@ const About = () => {
                   <value.icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <h3
-                  className={`text-lg sm:text-xl font-bold ${
-                    isDark ? 'text-white' : 'text-gray-900'
-                  } mb-3 sm:mb-4`}
+                  className={`text-lg sm:text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'
+                    } mb-3 sm:mb-4`}
                 >
                   {value.title}
                 </h3>
                 <p
-                  className={`text-sm sm:text-base ${
-                    isDark ? 'text-gray-400' : 'text-gray-600'
-                  } leading-relaxed`}
+                  className={`text-sm sm:text-base ${isDark ? 'text-gray-400' : 'text-gray-600'
+                    } leading-relaxed`}
                 >
                   {value.description}
                 </p>
@@ -421,49 +402,49 @@ const About = () => {
         </div>
       </section>
       <section
-              ref={ctaRef}
-              className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        ref={ctaRef}
+        className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      >
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-96 h-96 bg-white/5 rounded-full -top-48 -left-48 animate-pulse"></div>
+          <div className="absolute w-96 h-96 bg-white/5 rounded-full -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        <div className="font-display hidden lg:block absolute text-[16rem] font-bold text-white/5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
+          Christos
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Your Transformation Journey Starts Here
+          </h2>
+
+          <p className="font-body text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Join thousands of leaders who have unlocked their potential and transformed their impact through Mind Engineering
+          </p>
+
+          <div className="font-ui flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <Link
+              to="/events"
+              className="inline-block bg-white hover:bg-gray-100 text-blue-900 px-10 sm:px-12 py-5 sm:py-6 rounded-full text-base sm:text-lg font-bold transition-all duration-300 hover:scale-105 shadow-2xl w-full sm:w-auto text-center"
             >
-              {/* Animated Background Elements */}
-              <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute w-96 h-96 bg-white/5 rounded-full -top-48 -left-48 animate-pulse"></div>
-                <div className="absolute w-96 h-96 bg-white/5 rounded-full -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
-              </div>
-      
-              <div className="font-display hidden lg:block absolute text-[16rem] font-bold text-white/5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
-                Christos 
-              </div>
-              
-              <div className="relative z-10 max-w-4xl mx-auto text-center">
-                
-                <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                  Your Transformation Journey Starts Here
-                </h2>
-                
-                <p className="font-body text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-10 leading-relaxed">
-                  Join thousands of leaders who have unlocked their potential and transformed their impact through Mind Engineering
-                </p>
-      
-                <div className="font-ui flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-  <Link 
-    to="/events"
-    className="inline-block bg-white hover:bg-gray-100 text-blue-900 px-10 sm:px-12 py-5 sm:py-6 rounded-full text-base sm:text-lg font-bold transition-all duration-300 hover:scale-105 shadow-2xl w-full sm:w-auto text-center"
-  >
-    Schedule a Consultation
-  </Link>
-  
-  <Link
-    to="/"
-    className="inline-flex items-center space-x-2 text-white hover:text-blue-100 font-semibold text-base sm:text-lg transition-colors duration-300"
-  >
-    <Play className="w-5 h-5" />
-    <span>Watch Success Stories</span>
-  </Link>
-</div>
-      
-               
-              </div>
-            </section>
+              Schedule a Consultation
+            </Link>
+
+            <Link
+              to="/"
+              className="inline-flex items-center space-x-2 text-white hover:text-blue-100 font-semibold text-base sm:text-lg transition-colors duration-300"
+            >
+              <Play className="w-5 h-5" />
+              <span>Watch Success Stories</span>
+            </Link>
+          </div>
+
+
+        </div>
+      </section>
     </>
   );
 };
