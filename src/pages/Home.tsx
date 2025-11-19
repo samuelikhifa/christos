@@ -10,7 +10,7 @@ import c19Image from '@/assets/c19.webp'
 import c23Image from '@/assets/c23.webp'
 import ct3Image from '@/assets/ct3.webp'
 import ct5Image from '@/assets/ct5.webp'
-import bookCover from '@/assets/bookCover.jpg'
+import bookcover from '@/assets/bookcover.jpg'
 interface VisibleSections {
   hero?: boolean;
   letter?: boolean;
@@ -418,7 +418,7 @@ const Home = () => {
               <div className={`${isDark ? 'bg-gray-800' : 'bg-gray-100'} rounded-2xl p-4 sm:p-8 md:p-12 aspect-[3/4] flex items-center justify-center overflow-hidden`}>
                 <div className="text-center px-2">
                   <img
-                    src={bookCover}   // <-- replace with your actual import or URL
+                    src={bookcover}   // <-- replace with your actual import or URL
                     alt="Book Cover"
                     className="w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[450px] xl:max-w-[500px] mx-auto object-contain"
                   />
