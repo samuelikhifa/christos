@@ -42,22 +42,22 @@ const Home = () => {
 
   const testimonials = [
     {
-      quote: "Dr. Christos's Mind Engineering program completely transformed how I approach leadership. The insights and practical tools have elevated my impact exponentially.",
-      name: "John Doe",
-      role: "CEO, Tech Innovations Ltd",
-      initials: "JD"
+      quote: "Before Mind Engineering, I was limited by my own doubts. Now, I control my mind, and my mind creates my reality. I built a thriving business in 6 months!",
+      name: "Chinwe Agu",
+      role: "Entrepreneur & Innovator",
+      initials: "CA"
     },
     {
-      quote: "The BLA Roundtable experience was life-changing. I've gained clarity, confidence, and a network of like-minded leaders who inspire me daily.",
-      name: "Sarah Johnson",
-      role: "Founder, Impact Hub",
-      initials: "SJ"
+      quote: "I thought leadership was about skills. Then I learned Emotional Intelligence. Today, I lead not just with strategy-but with psychological precision and power.",
+      name: "Abubakar Suleiman",
+      role: " Corporate Executive Leader",
+      initials: "AS"
     },
     {
-      quote: "After attending the C-Suite Retreat, I returned with renewed vision and strategies that doubled our company's growth in just 6 months.",
-      name: "Michael Chen",
-      role: "Director, Global Ventures",
-      initials: "MC"
+      quote: "Psychological Proficiency in Perception helped me break free from addiction. I learned how to rewire my brain, and for the first time in my life, I feel truly in control. Today, I am not just free-l am helping others break free too.",
+      name: "Daniel Adeyemi",
+      role: "Former Addict, Now A Life Coach",
+      initials: "DA"
     }
   ];
 
