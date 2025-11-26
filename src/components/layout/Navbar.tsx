@@ -27,42 +27,40 @@ const Navbar = () => {
     <>
       {/* Navigation Bar */}
       <nav
-        className="fixed top-0 left-0 right-0 z-50 py-4 sm:py-1 md:py-6"
+        className="fixed top-0 left-0 right-0 z-50 py-3 sm:py-4"
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="max-w-5xl mx-auto px-1 sm:px-4 md:px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div
             className={`${isDark
               ? 'bg-gray-900 border-gray-700'
               : 'bg-white border-gray-200'
-              } rounded-full px-2 sm:px-0 md:px-6 py-1.5 sm:py-2 md:py-4 shadow-md border transition-all duration-300 ease-in-out`}
+              } rounded-full px-4 sm:px-6 py-2 sm:py-2.5 shadow-md border transition-all duration-300 ease-in-out`}
           >
-            <div className="flex items-center justify-between gap-2 sm:gap-3 md:gap-4">
-              {/* Logo / Brand Name */}
-
+            <div className="flex items-center justify-between gap-4">
               {/* Logo / Brand Name */}
               <Link
                 to="/"
                 onClick={handleLinkClick}
-                className="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg px-1 sm:px-2 py-1"
+                className="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg px-1 py-1"
                 aria-label="Dr. Christos Etoka - Home"
               >
                 <img
                   src={logoImage}
                   alt="CT Logo"
-                  className="w-24 h-24 sm:w-18 sm:h-18 md:w-16 md:h-16 object-contain"
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
               </Link>
 
               {/* Desktop Navigation Links */}
-              <div className="hidden lg:flex items-center gap-6 lg:gap-8">
+              <div className="hidden lg:flex items-center gap-4 lg:gap-6">
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
                     to={link.path}
                     onClick={handleLinkClick}
-                    className={`relative text-sm lg:text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1 ${isActive(link.path)
+                    className={`relative text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1 ${isActive(link.path)
                       ? isDark ? 'text-white font-medium' : 'text-gray-900 font-medium'
                       : isDark
                         ? 'text-gray-400 hover:text-white'
@@ -78,11 +76,11 @@ const Navbar = () => {
               </div>
 
               {/* Theme Toggle & Mobile Menu */}
-              <div className="flex items-center gap-2 sm:gap-3">
+              <div className="flex items-center gap-2">
                 {/* Theme Toggle */}
                 <button
                   onClick={toggleTheme}
-                  className={`p-2 sm:p-2.5 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 ${isDark
+                  className={`p-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 ${isDark
                     ? 'bg-gray-800/50 hover:bg-gray-700 text-gray-400'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                     }`}
@@ -90,16 +88,16 @@ const Navbar = () => {
                   title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
                 >
                   {isDark ? (
-                    <Sun className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 hover:rotate-90" />
+                    <Sun className="w-4 h-4 transition-transform duration-300 hover:rotate-90" />
                   ) : (
-                    <Moon className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 hover:rotate-12" />
+                    <Moon className="w-4 h-4 transition-transform duration-300 hover:rotate-12" />
                   )}
                 </button>
 
                 {/* Mobile Menu Button */}
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className={`lg:hidden min-w-[40px] min-h-[40px] p-2 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300 active:scale-95 flex items-center justify-center ${isDark
+                  className={`lg:hidden p-2 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300 active:scale-95 flex items-center justify-center ${isDark
                     ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                     }`}
@@ -148,10 +146,10 @@ const Navbar = () => {
                 }`}
               aria-label="Close menu"
             >
-              {/* <X className="w-6 h-6" /> */}
+              <X className="w-6 h-6" />
             </button>
             {/* Mobile Navigation Links */}
-            <nav className="mt-24 space-y-2 sm:space-y-3">
+            <nav className="mt-16 space-y-2 sm:space-y-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
