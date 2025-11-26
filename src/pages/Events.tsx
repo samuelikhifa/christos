@@ -516,7 +516,6 @@ const Events = () => {
 
                 <button className="w-full bg-white text-blue-600 hover:bg-blue-50 px-5 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-xl mt-2 flex items-center justify-center group">
                   <span className="text-xs sm:text-sm">Submit Booking Request</span>
-
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </div>

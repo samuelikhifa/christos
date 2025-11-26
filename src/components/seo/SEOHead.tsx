@@ -78,7 +78,7 @@ const SEOHead = ({
           description: 'World-renowned leader in Mind Engineering and Transformational Leadership'
         },
         sameAs: [
-           'https://www.linkedin.com/in/dr-christos-etoka-o-etoka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+          'https://www.linkedin.com/in/dr-christos-etoka-o-etoka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
           'https://x.com/iamdrchristos?t=ICogyJvieXxS5y9IvSQ2qw&s=09',
           'https://www.facebook.com/share/1A7n5UZPRe/',
           'https://www.instagram.com/therealdretoka?igsh=d3ZiMmR1eWpkbXJh',
