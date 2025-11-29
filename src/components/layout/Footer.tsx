@@ -42,9 +42,8 @@ const Footer = () => {
 
   return (
     <footer
-      className={`${
-        isDark ? 'bg-black text-white' : 'bg-black text-white'
-      } border-t border-gray-900 no-print`}
+      className={`${isDark ? 'bg-black text-white' : 'bg-black text-white'
+        } border-t border-gray-900 no-print`}
       role="contentinfo"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16">
@@ -72,7 +71,7 @@ const Footer = () => {
                 { name: 'About', path: '/about' },
                 // { name: 'Expertise', path: '/expertise' },
                 { name: 'Programs', path: '/programs' },
-                
+
                 { name: 'Events', path: '/events' },
                 { name: 'Connect', path: '/connect' },
               ].map((link) => (
@@ -138,7 +137,7 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400 text-sm">
-                  <p>Xrislid Institute of Mind Engineering –Novare Central Mall, Wuse Zone 5, Federal Capital Territory, Abuja, Nigeria (HQ)</p> <br/>
+                  <p>Xrislid Institute of Mind Engineering –Novare Central Mall, Wuse Zone 5, Federal Capital Territory, Abuja, Nigeria (HQ)</p> <br />
                   {/* <p>Xrislid Institute of Mind Engineering –No. 59C, I.C.E. Road, Off Wire Road, Benin City, 300271, Edo State, Nigeria.</p> */}
                   <p>Xrislid Institute of Mind Engineering –Learning Hall, Unit 15, Academic Park, 43 Chapel Street, Manchester, M3 5DF, United Kingdom.</p>
                 </div>
@@ -169,7 +168,12 @@ const Footer = () => {
               Get weekly insights on Mind Engineering, leadership, and transformation.
             </p>
 
-            <form onSubmit={handleSubscribe} className="space-y-3">
+            <form
+              onSubmit={handleSubscribe}
+              action="https://formspree.io/f/manveznp"
+              method="POST"
+              className="space-y-3"
+            >
               <input
                 type="email"
                 value={email}
@@ -215,11 +219,10 @@ const Footer = () => {
       {/* Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-4 sm:bottom-8 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 z-40 ${
-          showBackToTop
+        className={`fixed bottom-6 right-4 sm:bottom-8 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 z-40 ${showBackToTop
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-y-10 pointer-events-none'
-        } hover:scale-110 active:scale-95 animate-bounce-gentle`}
+          } hover:scale-110 active:scale-95 animate-bounce-gentle`}
         aria-label="Back to top"
       >
         <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6" />

@@ -44,11 +44,11 @@ const Connect = () => {
   const faqs = [
     {
       question: 'Can I book Dr. Christos to speak?',
-      answer: 'Yes. Simply email us at info@drchristos.com, and we\'ll guide you on the next steps.',
+      answer: 'Yes. Simply email us at <a href="mailto:Drchristos5689@gmail.com" class="text-blue-600 underline">Drchristos5689@gmail.com</a>, and we\'ll guide you on the next steps.',
     },
     {
       question: 'Where can I buy your books?',
-      answer: 'Our books are available in our online store, Amazon, and other book retailers. For African customers, please visit https://rhbooks.com.ng/.',
+      answer: 'Our books are available in our online store, Selar, and other book retailers. For African customers, please visit <a href="https://selar.com/pfa70541z5" target="_blank" class="text-blue-600 underline">https://selar.com/pfa70541z5</a>.',
     },
     {
       question: 'Does Dr. Christos provide one-on-one coaching?',
@@ -60,8 +60,9 @@ const Connect = () => {
     },
     {
       question: 'Can I attend Xrislid’s Mind Engineering University?',
-      answer: 'Yes, admission is open to individuals passionate about personal growth and leadership transformation. Please visit our admissions page for enrollment details and program dates.',
+      answer: 'Yes, admission is open to individuals passionate about personal growth and leadership transformation. Please visit our admissions page <a href="https://www.xrisliduniversity.org" target="_blank" class="text-blue-600 underline">https://www.xrisliduniversity.org</a> for enrollment details and program dates.',
     },
+
 
   ];
 
@@ -146,9 +147,13 @@ const Connect = () => {
                 ))}
               </div>
 
-              <button className="bg-white text-blue-600 hover:bg-blue-50 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold transition-all duration-300 hover:scale-105 shadow-xl w-full sm:w-auto">
+              <button
+                onClick={() => window.open('https://calendar.app.google/k2RC5F9cGfDBJEYX9', '_blank')}
+                className="bg-white text-blue-600 hover:bg-blue-50 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold transition-all duration-300 hover:scale-105 shadow-xl w-full sm:w-auto"
+              >
                 Book A Discovery Call
               </button>
+
             </div>
           </div>
         </div>
@@ -195,7 +200,7 @@ const Connect = () => {
               <div className="space-y-6">
                 <div>
                   <label className={`block font-semibold ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 text-sm sm:text-base`}>
-                    Full Name 
+                    Full Name
                   </label>
                   <input
                     name="name"
@@ -209,7 +214,7 @@ const Connect = () => {
 
                 <div>
                   <label className={`block font-semibold ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 text-sm sm:text-base`}>
-                    Email Address 
+                    Email Address
                   </label>
                   <input
                     name="email"
@@ -237,7 +242,7 @@ const Connect = () => {
 
                 <div>
                   <label className={`block font-semibold ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 text-sm sm:text-base`}>
-                    Subject 
+                    Subject
                   </label>
                   <select
                     value={formData.subject}
@@ -257,7 +262,7 @@ const Connect = () => {
 
                 <div>
                   <label className={`block font-semibold ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-2 text-sm sm:text-base`}>
-                    Message 
+                    Message
                   </label>
                   <textarea
                     value={formData.message}
@@ -348,7 +353,11 @@ const Connect = () => {
                 </button>
                 {openFaq === index && (
                   <div className={`px-6 pb-5 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                    <p className="text-sm sm:text-base leading-relaxed">{faq.answer}</p>
+                    <p
+                      className="text-sm sm:text-base leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
+
                   </div>
                 )}
               </div>

@@ -293,18 +293,21 @@ const Home = () => {
                 desc: 'The inner circle is a monthly mentoring program with Dr. Christos and community based network for aspiring leaders.',
                 image: ct3Image,
                 cta: 'Join Inner Circle',
+                // url: 'https://your-url.com/inner-circle'
               },
               {
                 title: 'Mind Engineering',
-                desc: 'Mind Engineering is an innovative learning institute dedicated to shaping thinkers and transformational leaders. It offers a redefined approach to education—focusing on mastering the mind, unlocking human potential, and engineering lasting impact beyond conventional systems.',
+                desc: 'Mind Engineering is an innovative learning institute dedicated to shaping thinkers and transformational leaders...',
                 image: c23Image,
-                cta: 'Join The Inner Circle',
+                cta: 'Join Mind Engineering',
+                url: 'https://www.xrisliduniversity.org'
               },
               {
                 title: 'C-Suite Retreat',
-                desc: 'An exclusive executive retreat designed for C-level leaders to rejuvenate, strategize, and connect in a transformative environment.',
+                desc: 'An exclusive executive retreat designed for C-level leaders...',
                 image: c19Image,
                 cta: 'Register for Retreat',
+                // url: 'https://your-url.com/csuite-retreat'
               },
             ].map((program, index) => (
               <div
@@ -372,9 +375,15 @@ const Home = () => {
                         </p>
                       </div>
 
-                      <button className="inline-flex items-center justify-center space-x-2 bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 w-full sm:w-auto shadow-lg">
+                      <a
+                        href={program.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center space-x-2 bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 w-full sm:w-auto shadow-lg"
+                      >
                         <span>{program.cta}</span>
-                      </button>
+                      </a>
+
                     </div>
                   </div>
                 </div>
